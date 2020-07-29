@@ -1,0 +1,127 @@
+usage: bert_lstm_ner.py -max_seq_length 500 -batch_size 2 -learning_rate 2e-5 -num_train_epochs 3.0 -filter_adam_var True -verbose -data_dir person_data -output_dir output -init_checkpoint models/chinese_L-12_H-768_A-12/bert_model.ckpt -bert_config_file models/chinese_L-12_H-768_A-12/bert_config.json -vocab_file models/chinese_L-12_H-768_A-12/vocab.txt
+                 ARG   VALUE
+__________________________________________________
+          batch_size = 2
+    bert_config_file = models/chinese_L-12_H-768_A-12/bert_config.json
+                cell = lstm
+               clean = True
+                clip = 0.5
+            data_dir = person_data
+          device_map = 0
+             do_eval = True
+       do_lower_case = True
+          do_predict = True
+            do_train = True
+        dropout_rate = 0.5
+     filter_adam_var = True
+     init_checkpoint = models/chinese_L-12_H-768_A-12/bert_model.ckpt
+          label_list = None
+       learning_rate = 2e-05
+           lstm_size = 128
+      max_seq_length = 500
+                 ner = ner
+          num_layers = 1
+    num_train_epochs = 3.0
+          output_dir = output
+save_checkpoints_steps = 500
+  save_summary_steps = 500
+             verbose = True
+          vocab_file = models/chinese_L-12_H-768_A-12/vocab.txt
+   warmup_proportion = 0.1
+
+shape of input_ids (2, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+shape of input_ids (?, 500)
+processed 52160 tokens with 2554 phrases; found: 2502 phrases; correct: 2015.
+accuracy:  95.99%; precision:  80.54%; recall:  78.90%; FB1:  79.71
+     COMPANY_NAME: precision:  69.79%; recall:  68.62%; FB1:  69.20  235
+         LOCATION: precision:  77.87%; recall:  77.61%; FB1:  77.74  601
+         ORG_NAME: precision:  73.25%; recall:  62.68%; FB1:  67.55  243
+      PERSON_NAME: precision:  92.60%; recall:  91.63%; FB1:  92.11  662
+     PRODUCT_NAME: precision:  68.73%; recall:  66.85%; FB1:  67.78  355
+             TIME: precision:  85.71%; recall:  88.32%; FB1:  87.00  406
+
