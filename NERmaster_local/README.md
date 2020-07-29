@@ -1,3 +1,8 @@
+Need download the bert_base pretrain model and put it into bert_model_info
+Need download the train model from s3 adn put it into person folder
+
+
+
 ## reference: 
 https://github.com/macanv/BERT-BiLSTM-CRF-NER
 
